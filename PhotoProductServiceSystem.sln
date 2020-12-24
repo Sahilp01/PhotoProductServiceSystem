@@ -8,6 +8,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PhotoProductFrontOffice", "PhotoProductFrontOffice\", "{20CDD201-16BB-423B-B87F-78C50A56C0D6}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{13bcbd0f-3102-4226-913a-a7999d0e83ab}|PhotoProductClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_63626"
 		Debug.AspNetCompiler.PhysicalPath = "PhotoProductFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63626\"
