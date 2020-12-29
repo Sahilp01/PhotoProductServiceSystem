@@ -21,4 +21,9 @@ public partial class HomePage : System.Web.UI.Page
     {
         Response.Redirect("Signup.aspx");
     }
+
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

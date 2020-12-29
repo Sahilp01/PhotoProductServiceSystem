@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div style="height: 845px">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblLogin" runat="server" BackColor="#FFFFCC" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" Text="Login Page"></asp:Label>
+            <asp:Label ID="lblLogin" runat="server" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" Text="Login to PhotoPerfect"></asp:Label>
             <br />
             <br />
             <br />
@@ -25,13 +25,15 @@
 &nbsp;<br />
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFCC" OnClick="btnLogin_Click" Text="Login" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFCC" OnClick="btnLogin_Click" Text="Login" Font-Size="X-Large" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnCancel" runat="server" BackColor="#CCFFCC" OnClick="btnCancel_Click" Text="Cancel" />
             <br />
             <br />
             <br />
+            <br />
+            <br />
+            <asp:Label ID="lblError" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Error"></asp:Label>
         </div>
     </form>
 </body>

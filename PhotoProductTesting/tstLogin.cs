@@ -7,6 +7,10 @@ namespace PhotoProductTesting
     [TestClass]
     public class tstLogin
     {
+        String Username = "P123";
+        String Password = "Sahil";
+
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -22,7 +26,7 @@ namespace PhotoProductTesting
             Assert.AreEqual(AnLogin.Username, TestData);
         }
     [TestMethod]
-    public void Password()
+    public void PasswordOk()
         {
             clsLogin AnLogin = new clsLogin();
             string TestData = "Sahil";
@@ -30,6 +34,34 @@ namespace PhotoProductTesting
             Assert.AreEqual(AnLogin.Password, TestData);
         }
 
+    [TestMethod]
+    public void ValidMethodOK()
+        {
+            clsLogin AnLogin = new clsLogin();
+            String Error = "";
+            Error = AnLogin.Valid(Username, Password);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void UsernameMinlessOne()
+        {
+            clsLogin AnLogin = new clsLogin();
+            String Error = "";
+            string Username = "";
+            Error = AnLogin.Valid(Username, Password);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void PasswordMinlessOne()
+        {
+            clsLogin AnLogin = new clsLogin();
+            String Error = "";
+            string Password = "";
+            Error = AnLogin.Valid(Username, Password);
+            Assert.AreNotEqual(Error, "");
+        }
 
     }
 }
