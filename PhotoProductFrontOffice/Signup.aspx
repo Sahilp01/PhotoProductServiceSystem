@@ -70,7 +70,7 @@
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button1" runat="server" BackColor="#CCFFFF" Font-Size="X-Large" Text="Create Account" />
+            <asp:Button ID="btnCreateAccount" runat="server" BackColor="#CCFFFF" Font-Size="X-Large" Text="Create Account" OnClick="Button1_Click" />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
@@ -78,6 +78,7 @@
             <br />
             <br />
             <br />
+            <asp:Label ID="lblError1" runat="server"></asp:Label>
             <br />
             <br />
             <br />

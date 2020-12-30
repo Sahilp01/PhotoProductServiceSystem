@@ -11,12 +11,13 @@ namespace PhotoProductTesting
         String Password = "Sahil";
 
 
-        [TestMethod]
-        public void InstanceOK()
+    [TestMethod]
+    public void InstanceOK()
         {
             clsLogin AnLogin = new clsLogin();
             Assert.IsNotNull(AnLogin);
         }
+
     [TestMethod]
     public void UsernameOK()
         {

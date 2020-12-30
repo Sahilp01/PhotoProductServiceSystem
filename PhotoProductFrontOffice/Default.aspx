@@ -33,7 +33,7 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="lblError" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Error"></asp:Label>
+            <asp:Label ID="lblError" runat="server" Font-Bold="True" Font-Size="XX-Large"></asp:Label>
         </div>
     </form>
 </body>
