@@ -143,5 +143,35 @@ namespace PhotoProductTesting
             Error = AnSignUp.Valid(FirstName, LastName, EmailAddress, Password, Address, PostCode);
             Assert.AreNotEqual(Error, "");
         }
+
+       /* [TestMethod]
+        public void AddMethodOk()
+        {
+            clsSignUp AllSignup = new clsSignUp();
+            clsSignUp TestItem = new clsSignUp();
+            Int32 PrimaryKey = 0;
+            TestItem.FirstName = "Test";
+            TestItem.LastName = "Testp";
+            TestItem.EmailAddress = "Test@gmail.com";
+            TestItem.Password = "Test1";
+            TestItem.Address = "1 Test Road";
+            TestItem.PostCode = "LE4 6TT";
+            AllSignup.ThisSignUp = TestItem;
+            PrimaryKey = AllSignup.Add();
+            TestItem.CustomerID = PrimaryKey;
+
+            AllSignup.ThisSignUp.Find(PrimaryKey);
+            Assert.AreEqual(AllSignup.ThisSignUp, TestItem);
+        }
+
+        [TestMethod]
+        public void FindMethodOk()
+        {
+            clsSignUp AnSignUp = new clsSignUp();
+            Boolean Found = false;
+            Int32 CustomerID = 1;
+            Found = AnSignUp.Find(CustomerID);
+            Assert.IsTrue(Found);
+        } */
     }
 }
