@@ -31,32 +31,35 @@ public partial class _Default : System.Web.UI.Page
             AnLogin.Username = Username;
             AnLogin.Password = Password;
             Session["AnLogin"] = AnLogin;
-            Response.Redirect("HomePage1.aspx");
+            /// Response.Redirect("HomePage1.aspx");
+           
         }
         else
         {
             lblError.Text = Error;
+
+            // lblLabel3.Visible = false;
         }
 
-       /* SqlConnection sqlcol = new SqlConnection("Data Source=PhotoProductServer.database.windows.net;User ID=PhotoProduct;Password=********;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-        string query = "Select * from tblLogin where Username = '" + txtUsername.Text.Trim() + "'  and Password = '" + txtPassword.Text.Trim() + "'";
-        SqlDataAdapter sda = new SqlDataAdapter(query, sqlcol);
-        DataTable dtbl = new DataTable();
-        sda.Fill(dtbl);
-        if (dtbl.Rows.Count == 1)
+
+        SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Prisha16;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername.Text + "' AND Password= '" + txtPassword.Text + "'", con);
+        DataTable dt = new DataTable(); //this is creating a virtual table  
+        sda.Fill(dt);
+        if (dt.Rows[0][0].ToString() == "1")
         {
+            //If the user is successfully authenticated then the form will be moved to the next form */
             Response.Redirect("HomePage1.aspx");
-
+            
         }
+        
         else
         {
-            lblError.Text = Error;
+            
+            lblLabel3.Text = "The Login that you have entered is inccorect";
+          
         }
-        */
-
-
-
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)

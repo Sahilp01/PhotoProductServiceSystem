@@ -169,22 +169,7 @@ public string PostCode
             return Error;
         }
 
-        /*public int Add()
-        {
-            clsDataConnection DB = new clsDataConnection();
-            DB.AddParameter("@FirstName", mthisSignUp.FirstName);
-            DB.AddParameter("@LastName", mthisSignUp.LastName);
-            DB.AddParameter("@EmailAddress", mthisSignUp.EmailAddress);
-            DB.AddParameter("@Password", mthisSignUp.Password);
-            DB.AddParameter("@Address", mthisSignUp.Address);
-            DB.AddParameter("@PostCode", mthisSignUp.PostCode);
-            return DB.Execute("sproc_tblSignUp_Insert");
-        }
-
-        public bool Find(int customerID)
-        {
-            return true;
-        }*/
+      
     }
 
 }

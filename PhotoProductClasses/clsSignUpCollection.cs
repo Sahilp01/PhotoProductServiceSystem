@@ -36,19 +36,20 @@ namespace PhotoProductClasses
 
         public int Add()
         {
-            mThisSignUp.CustomerID = 12;
-            return mThisSignUp.CustomerID;
+            //mThisSignUp.CustomerID = 12;
+            //return mThisSignUp.CustomerID;
 
-           
-        
-           /* clsDataConnection DB = new clsDataConnection();
+
+
+            clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@FirstName", mThisSignUp.FirstName);
             DB.AddParameter("@LastName", mThisSignUp.LastName);
             DB.AddParameter("@EmailAddress", mThisSignUp.EmailAddress);
             DB.AddParameter("@Password", mThisSignUp.Password);
             DB.AddParameter("@Address", mThisSignUp.Address);
             DB.AddParameter("@PostCode", mThisSignUp.PostCode);
-            return DB.Execute("sproc_tblSignUp_Insert");*/
+
+            return DB.Execute("sproc_tblSignUp_Insert");
         }
         
 

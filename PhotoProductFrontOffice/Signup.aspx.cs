@@ -35,6 +35,10 @@ public partial class Signup : System.Web.UI.Page
             AnSignUp.Password = Password;
             AnSignUp.Address = Address;
             AnSignUp.PostCode = PostCode;
+
+            clsSignUpCollection SignUpList = new clsSignUpCollection();
+            SignUpList.ThisSignUp = AnSignUp;
+            SignUpList.Add();
             Session["AnSignUp"] = AnSignUp;
             Response.Redirect("Default.aspx");
         }
