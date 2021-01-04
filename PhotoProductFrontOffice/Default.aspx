@@ -35,9 +35,10 @@
 &nbsp;<br />
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFCC" OnClick="btnLogin_Click" Text="Login" Font-Size="X-Large" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFFF" OnClick="btnLogin_Click" Text="Login" Font-Size="X-Large" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnForgetPassword" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="42px" OnClick="btnForgetPassword_Click" Text="Forgot Password?" Width="248px" />
             <br />
             <br />
             <br />
@@ -47,7 +48,7 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="lblLabel3" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="lblLabel3" runat="server" Font-Bold="True" Font-Italic="False" Font-Size="X-Large"></asp:Label>
             <br />
         </div>
     </form>

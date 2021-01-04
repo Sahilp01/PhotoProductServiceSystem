@@ -57,18 +57,19 @@ public partial class _Default : System.Web.UI.Page
         else
         {
             
-            lblLabel3.Text = "The Login that you have entered is inccorect";
+            lblLabel3.Text = "The Login that you have entered is incorrect";
           
         }
     }
 
-    protected void btnCancel_Click(object sender, EventArgs e)
+
+
+
+
+
+
+    protected void btnForgetPassword_Click(object sender, EventArgs e)
     {
-
-    }
-
-    protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
-    {
-
+        Response.Redirect("ResetPassword.aspx");
     }
 }

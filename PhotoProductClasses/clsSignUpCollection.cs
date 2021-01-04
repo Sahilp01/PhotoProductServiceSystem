@@ -7,6 +7,7 @@ namespace PhotoProductClasses
     {
         List<clsSignUp> mSignUpList = new List<clsSignUp>();
         clsSignUp mThisSignUp = new clsSignUp();
+        clsLogin mthisLogin = new clsLogin();
 
         public List<clsSignUp> SignUpList
         {
@@ -48,6 +49,10 @@ namespace PhotoProductClasses
             DB.AddParameter("@Password", mThisSignUp.Password);
             DB.AddParameter("@Address", mThisSignUp.Address);
             DB.AddParameter("@PostCode", mThisSignUp.PostCode);
+           // DB.AddParameter("@Username", mthisLogin.Username);
+           // DB.AddParameter("@EmailAddress", mthisLogin.Username);
+            
+           
 
             return DB.Execute("sproc_tblSignUp_Insert");
         }
