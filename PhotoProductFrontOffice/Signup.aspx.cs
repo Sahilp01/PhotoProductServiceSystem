@@ -38,14 +38,13 @@ public partial class Signup : System.Web.UI.Page
             AnSignUp.Password = Password;
             AnSignUp.Address = Address;
             AnSignUp.PostCode = PostCode;
-            //AnLogin.Username = EmailAddress;
-            //AnLogin.Password = Password;
+       
 
             clsSignUpCollection SignUpList = new clsSignUpCollection();
             SignUpList.ThisSignUp = AnSignUp;
-            //SignUpList.ThisLogin = AnLogin;
-            SignUpList.Add();
-            SignUpList.AddLogin();
+           
+            SignUpList.Add(); // Adds the data to the sign up table
+            SignUpList.AddLogin(); // Adds the email address and passsword from sign up page to the login table
             Session["AnSignUp"] = AnSignUp;
 
 

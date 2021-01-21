@@ -49,20 +49,20 @@ public partial class _Default : System.Web.UI.Page
 
 
         SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Prisha16;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
-        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername.Text + "' AND Password= '" + txtPassword.Text + "'", con);
+        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername.Text + "' AND Password= '" + txtPassword.Text + "'", con); // checks that the username and password that the user entered is there in login table or not.
         DataTable dt = new DataTable(); //this is creating a virtual table  
         sda.Fill(dt);
         if (dt.Rows[0][0].ToString() == "1")
         {
-            //If the user is successfully authenticated then the form will be moved to the next form */
-            Response.Redirect("HomePage1.aspx");
+            
+            Response.Redirect("HomePage1.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
 
         }
 
         else
         {
 
-            lblLabel3.Text = "The Login that you have entered is incorrect";
+            lblLabel3.Text = "The Login that you have entered is incorrect"; // if the details that the user enters is not in the login table then they wull get an error.
 
 
         }

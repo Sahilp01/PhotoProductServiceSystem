@@ -48,10 +48,15 @@
             <br />
             <br />
             <br />
+            <asp:Label ID="lblsuccess" runat="server" Font-Size="X-Large"></asp:Label>
+            <br />
+            <br />
             <br />
             <asp:Label ID="lblErrorPass" runat="server" Font-Size="X-Large"></asp:Label>
             <br />
             <br />
+            <br />
+            <asp:Button ID="Button2" runat="server" BackColor="#CCFFFF" Font-Size="X-Large" Height="65px" OnClick="Button2_Click" Text="Click here to login" Width="413px" />
             <br />
             <br />
             <br />

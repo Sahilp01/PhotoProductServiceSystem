@@ -42,41 +42,37 @@ public partial class ResetPassword : System.Web.UI.Page
 
 
         SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Prisha16;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
-        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Password = '" + txtUsername1.Text + "'", con);
+        SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername1.Text + "'", con); // selects the username from the login table 
         DataTable dt = new DataTable(); //this is creating a virtual table  
         sda.Fill(dt);
         if (dt.Rows[0][0].ToString() == "1")
         {
-            //If the user is successfully authenticated then the form will be moved to the next form */
-            //Response.Redirect("Default.aspx");
+            
 
             if (txtNewPassword.Text == txtNewPassword1.Text)
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Update tblLogin set Password = '" + txtNewPassword.Text + "' WHERE Password = '" + txtUsername1 + "' ", con);
-                cmd.ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand("Update tblLogin set Password = '" + txtNewPassword.Text + "' WHERE Username = '" + txtUsername1.Text + "' ", con); // updates the password in the login table by finding the username of the user
+                cmd.ExecuteNonQuery(); //excutes the sql command 'cmd' query.
 
                 con.Close();
-                lblErrorPass.Text = "Successfull";
+                lblsuccess.Text = "Your password has successfully changed."; // if the usernmae is correct and both password field matches, then it will tell user that the opassword chnage is successful. 
+                
 
             }
 
-
-
-
-
-            else
+            else 
             {
-
-                lblErrorPass.Text = "The username that you have entered is incorrect";
-
+                lblErrorPass.Text = "The username that you have entered is incorrect"; 
 
             }
-
-
-            
 
         }
 
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
     }
 }
