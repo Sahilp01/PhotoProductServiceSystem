@@ -32,6 +32,18 @@ namespace PhotoProductClasses
                 mThisSignUp = value;
             }
         }
+        public clsLogin ThisLogin
+        {
+            get
+            {
+                return mthisLogin;
+            }
+            set
+            {
+                mthisLogin = value;
+            }
+        }
+        
 
 
 
@@ -50,13 +62,68 @@ namespace PhotoProductClasses
             DB.AddParameter("@Address", mThisSignUp.Address);
             DB.AddParameter("@PostCode", mThisSignUp.PostCode);
            // DB.AddParameter("@Username", mthisLogin.Username);
-           // DB.AddParameter("@EmailAddress", mthisLogin.Username);
+          // DB.AddParameter("@EmailAddress", mthisLogin.Username);
+           // DB.AddParameter("@Password", mthisLogin.Password);
             
            
 
-            return DB.Execute("sproc_tblSignUp_Insert");
+           return DB.Execute("sproc_tblSignUp_Insert");
+           
+            
+
+            // return DB.Execute("sproc_tbltblLogin_Insert");
         }
-        
+
+
+        public int AddLogin()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@Username", mThisSignUp.EmailAddress);
+            DB.AddParameter("@Password", mThisSignUp.Password);
+
+            return DB.Execute("sproc_tblLogin_Insert");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void Update()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@CustomerID", mThisSignUp.CustomerID);
+            DB.AddParameter("@FirstName", mThisSignUp.FirstName);
+            DB.AddParameter("@LastName", mThisSignUp.LastName);
+            DB.AddParameter("@EmailAddress", mThisSignUp.EmailAddress);
+            DB.AddParameter("@Password", mThisSignUp.Password);
+            DB.AddParameter("@Address", mThisSignUp.Address);
+            DB.AddParameter("@PostCode", mThisSignUp.PostCode);
+
+            DB.Execute("sproc_tblSignUp_Update");
+        }
+
+         
+
+
+
+
 
         /* public clsSignUpCollection()
          {
@@ -79,5 +146,5 @@ namespace PhotoProductClasses
 
              }*/
 
-        }
+    }
     }

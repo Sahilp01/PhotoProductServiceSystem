@@ -53,6 +53,7 @@
     <Compile Include="tstLogin.cs" />
     <Compile Include="tstSignUp.cs" />
     <Compile Include="tstSignUpCollection.cs" />
+    <Compile Include="tstUpdatePassError.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

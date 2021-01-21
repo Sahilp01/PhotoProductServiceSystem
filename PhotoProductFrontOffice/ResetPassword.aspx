@@ -25,19 +25,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label2" runat="server" Font-Size="Large" Text="Enter your Username"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtUsername1" runat="server" Height="29px" Width="287px" OnTextChanged="txtUsername1_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtUsername1" runat="server" Height="29px" Width="287px" ></asp:TextBox>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label3" runat="server" Font-Size="Large" Text="Enter a new Password"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtNewPassword" runat="server" Height="29px" Width="287px" OnTextChanged="txtNewPassword_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtNewPassword" runat="server" Height="29px" Width="287px" ></asp:TextBox>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label4" runat="server" Font-Size="Large" Text="Rewrite your new Password"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtNewPassword1" runat="server" Height="29px" Width="287px" OnTextChanged="txtNewPassword1_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtNewPassword1" runat="server" Height="29px" Width="287px" ></asp:TextBox>
             <br />
             <br />
             <br />
@@ -47,6 +47,9 @@
             <br />
             <br />
             <br />
+            <br />
+            <br />
+            <asp:Label ID="lblErrorPass" runat="server" Font-Size="X-Large"></asp:Label>
             <br />
             <br />
             <br />

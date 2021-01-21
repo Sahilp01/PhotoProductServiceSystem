@@ -31,12 +31,15 @@
             <br />
             <asp:Label ID="lblPassword" runat="server" Text="Password" Font-Size="Large"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtPassword" runat="server" Height="26px" Width="291px"></asp:TextBox>
-&nbsp;<br />
+            <asp:TextBox ID="txtPassword" runat="server" Height="26px" Width="291px" TextMode= "Password"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnshowpass" runat="server" BackColor="#CCFFFF" Height="43px" OnClick="btnshowpass_Click" Text="Show Password" Width="225px" />
+           
+            <br />
             <br />
             <br />
 &nbsp;&nbsp;
-            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFFF" OnClick="btnLogin_Click" Text="Login" Font-Size="X-Large" />
+            <asp:Button ID="btnLogin" runat="server" BackColor="#CCFFFF" OnClick="btnLogin_Click" Text="Login" Font-Size="X-Large" Height="56px" Width="167px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnForgetPassword" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="42px" OnClick="btnForgetPassword_Click" Text="Forgot Password?" Width="248px" />
             <br />

@@ -19,12 +19,15 @@ public partial class Signup : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         clsSignUp AnSignUp = new clsSignUp();
+        clsLogin AnLogin = new clsLogin();
         string FirstName = txtFirstName.Text;
         string LastName = txtLastname.Text;
         string EmailAddress = txtEmailaddress.Text;
         string Password = txtPassword.Text;
         string Address = txtAddress.Text;
         string PostCode = txtPostcode.Text;
+   
+       
         string Error = "";
         Error = AnSignUp.Valid(FirstName, LastName, EmailAddress, Password, Address, PostCode);
         if (Error == "")
@@ -35,11 +38,17 @@ public partial class Signup : System.Web.UI.Page
             AnSignUp.Password = Password;
             AnSignUp.Address = Address;
             AnSignUp.PostCode = PostCode;
+            //AnLogin.Username = EmailAddress;
+            //AnLogin.Password = Password;
 
             clsSignUpCollection SignUpList = new clsSignUpCollection();
             SignUpList.ThisSignUp = AnSignUp;
+            //SignUpList.ThisLogin = AnLogin;
             SignUpList.Add();
+            SignUpList.AddLogin();
             Session["AnSignUp"] = AnSignUp;
+
+
             Response.Redirect("Default.aspx");
         }
         else

@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -14,8 +15,12 @@ public partial class _Default : System.Web.UI.Page
     {
         clsLogin AnLogin = new clsLogin();
         AnLogin = (clsLogin)Session["Default"];
-       // Response.Write(AnLogin.Username);
+        // Response.Write(AnLogin.Username);
         // Response.Write(AnLogin.Password);
+
+        txtPassword.TextMode = TextBoxMode.Password;
+       
+
 
     }
 
@@ -32,7 +37,7 @@ public partial class _Default : System.Web.UI.Page
             AnLogin.Password = Password;
             Session["AnLogin"] = AnLogin;
             /// Response.Redirect("HomePage1.aspx");
-           
+
         }
         else
         {
@@ -51,19 +56,17 @@ public partial class _Default : System.Web.UI.Page
         {
             //If the user is successfully authenticated then the form will be moved to the next form */
             Response.Redirect("HomePage1.aspx");
-            
+
         }
-        
+
         else
         {
-            
+
             lblLabel3.Text = "The Login that you have entered is incorrect";
-          
+
+
         }
     }
-
-
-
 
 
 
@@ -72,4 +75,15 @@ public partial class _Default : System.Web.UI.Page
     {
         Response.Redirect("ResetPassword.aspx");
     }
+
+
+
+ 
+
+    protected void btnshowpass_Click(object sender, EventArgs e)
+    {
+        txtPassword.TextMode = TextBoxMode.SingleLine;
+        this.txtPassword.Text = txtPassword.Text;
+    }
 }
+    
