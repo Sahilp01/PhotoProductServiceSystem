@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
         // Response.Write(AnLogin.Password);
 
         txtPassword.TextMode = TextBoxMode.Password;
-       
+
 
 
     }
@@ -54,19 +54,26 @@ public partial class _Default : System.Web.UI.Page
         sda.Fill(dt);
         if (dt.Rows[0][0].ToString() == "1")
         {
-            
+
             Response.Redirect("HomePage1.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
 
         }
 
         else
         {
-
+            lblError.Visible = true;
             lblLabel3.Text = "The Login that you have entered is incorrect"; // if the details that the user enters is not in the login table then they wull get an error.
 
 
         }
     }
+
+    protected void btnshowpass_Click(object sender, EventArgs e)
+    {
+        txtPassword.TextMode = TextBoxMode.SingleLine;
+        this.txtPassword.Text = txtPassword.Text;
+    }
+
 
 
 
@@ -77,13 +84,8 @@ public partial class _Default : System.Web.UI.Page
     }
 
 
-
+}
  
 
-    protected void btnshowpass_Click(object sender, EventArgs e)
-    {
-        txtPassword.TextMode = TextBoxMode.SingleLine;
-        this.txtPassword.Text = txtPassword.Text;
-    }
-}
+   
     

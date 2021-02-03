@@ -12,11 +12,11 @@ namespace PhotoProductClasses
             String Error = "";
             if (username.Length == 0)
             {
-                Error = Error + "The Username should not be left blank, ";
+                Error = Error + "The Username should not be left blank || ";
             }
             if (password.Length == 0)
             {
-                Error = Error + "The Password should not be left blank ";
+                Error = Error + "The Password should not be left blank || ";
             }
             return Error;
         }

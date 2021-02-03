@@ -14,4 +14,14 @@ public partial class HomePage1 : System.Web.UI.Page
         AnLogin = (clsLogin)Session["AnLogin"];
        // Response.Write(AnLogin.Username);
     }
+
+    protected void btnPrints_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("PhotoPrints.aspx");
+    }
+
+    protected void btncanvas_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CanvasPrints.aspx");
+    }
 }

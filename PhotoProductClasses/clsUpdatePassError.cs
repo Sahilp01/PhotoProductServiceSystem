@@ -14,19 +14,19 @@ namespace PhotoProductClasses
             String Error = "";
             if (emailAddress.Length == 0)
             {
-                Error = Error + "The Email Address should not be left blank, ";
+                Error = Error + "The Email Address should not be left blank || ";
             }
             if (newPassword.Length == 0)
             {
-                Error = Error + "The Password should not be left blank ";
+                Error = Error + "The Password should not be left blank || ";
             }
             if (reenterNewPassword.Length == 0)
             {
-                Error = Error + "The Password should not be left blank ";
+                Error = Error + "The Password should not be left blank || ";
             }
             if (newPassword != reenterNewPassword)
             {
-                Error = Error + "The Password doesn't match. Please enter the same password ";
+                Error = Error + "The Password doesn't match. Please enter the same password || ";
             }
             return Error;
         }

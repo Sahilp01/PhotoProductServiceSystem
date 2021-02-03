@@ -139,31 +139,31 @@ public string PostCode
             String Error = "";
             if (firstName.Length == 0)
             {
-                Error = Error + "Please Enter your First Name :";
+                Error = Error + "Please Enter your First Name || ";
             }
             if (lastName.Length == 0)
             {
-                Error = Error + "Please Enter your Last Name :";
+                Error = Error + "Please Enter your Last Name || ";
             }
             if (emailAddress.Length == 0)
             {
-                Error = Error + "Please Enter your Email Address :";
+                Error = Error + "Please Enter your Email Address || ";
             }
             if (password.Length == 0)
             {
-                Error = Error + "Please Enter a Password :";
+                Error = Error + "Please Enter a Password || ";
             }
             if (address.Length == 0)
             {
-                Error = Error + "Please Enter your Adrress :";
+                Error = Error + "Please Enter your Adrress || ";
             }
             if (postCode.Length == 0)
             {
-                Error = Error + "Please Enter yout PostCode :";
+                Error = Error + "Please Enter yout PostCode || ";
             }
             if (postCode.Length > 9)
             {
-                Error = Error + "The Post code must be less than 9 Characters :";
+                Error = Error + "The Post code must be less than 9 Characters || ";
             }
 
             return Error;
