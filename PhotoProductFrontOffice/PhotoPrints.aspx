@@ -7,9 +7,6 @@
     <title></title>
     <style type="text/css">
 *,::after,::before{text-shadow:none!important;box-shadow:none!important}*,::after,::before{box-sizing:border-box}
-        .auto-style1 {
-            height: 183px;
-        }
         .auto-style2 {
             width: 100%;
             margin-top: 0px;
@@ -23,31 +20,76 @@
         }
         .auto-style5 {
             height: 183px;
-            width: 448px;
+            width: 465px;
         }
         .auto-style6 {
-            width: 448px;
+            width: 465px;
         }
         .auto-style7 {
             margin-top: 0px;
         }
-        .auto-style8 {
-            width: 453px;
+        .auto-style10 {
+            height: 183px;
+            width: 459px;
         }
-        .auto-style9 {
-            width: 447px;
+        .auto-style11 {
+            width: 459px;
+        }
+        .auto-style12 {
+            width: 452px;
+            height: 188px;
+        }
+        .auto-style13 {
+            width: 465px;
+            position: inherit;
+            height: 188px;
+        }
+        .auto-style14 {
+            width: 459px;
+            height: 188px;
+        }
+        .auto-style15 {
+            width: 466px;
+        }
+        .auto-style16 {
+            width: 483px;
+        }
+        .auto-style17 {
+            width: 100%;
+        }
+        .auto-style18 {
+            width: 466px;
+            height: 146px;
+        }
+        .auto-style19 {
+            width: 483px;
+            height: 146px;
+        }
+        .auto-style20 {
+            height: 146px;
+        }
+        .auto-style21 {
+            width: 466px;
+            height: 31px;
+        }
+        .auto-style22 {
+            width: 483px;
+            height: 31px;
+        }
+        .auto-style23 {
+            height: 31px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="text-align: center">
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Welcome to PhotoPerfect" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblSubtitle" runat="server" BackColor="#CCFFFF" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="Medium" Text="A place for your perfect pictures"></asp:Label>
             <br />
             <br />
@@ -75,55 +117,87 @@ I am sure you must have many different photos  that best describes your moments.
                         <br />
                         <br />
                     </td>
-                    <td class="auto-style1"></td>
+                    <td class="auto-style10">
+                        <asp:Image ID="Image4" runat="server" Height="271px" ImageUrl="~/collage prints.jpg" Width="455px" />
+                    </td>
                 </tr>
                 <tr>
-                    <td class="auto-style4" style="font-size: larger">&nbsp;
+                    <td class="auto-style12" style="font-size: larger; text-align: center; color: #000000;">&nbsp;
                         <br />
-                        Standard 6 * 4 Photo Prints<br />
+                        Standard 6 x 4 Photo Prints<br />
                         <br />
                         From: £0.20<br />
                         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnSelect" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
                         <br />
                     </td>
-                    <td class="auto-style6" style="font-size: large">Standard Square Prints<br />
+                    <td class="auto-style13" style="font-size: large; text-align: center;">
+                        <br />
+                        Standard Square Prints<br />
                         <br />
                         From: £0.20<br />
                         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnSelectSqaure" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnSelectSqaure" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
                     </td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style14" style="font-size: large; text-align: center;">Collage Prints
+                        <br />
+                        <br />
+                        From: £6.99<br />
+                        <br />
+                        <asp:Button ID="btnCollagePrints" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">
                         <br />
-                        <br />
-                        <br />
+                        <asp:Image ID="Image5" runat="server" Height="245px" ImageUrl="~/8 x 6.jpg" Width="410px" />
                         <br />
                         <br />
                     </td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style6">
+                        <asp:Image ID="Image6" runat="server" Height="243px" ImageUrl="~/black frame.jpg" Width="412px" />
+                    </td>
+                    <td class="auto-style11">
+                        <asp:Image ID="Image7" runat="server" Height="239px" ImageUrl="~/retro.jpg" Width="431px" />
+                    </td>
                 </tr>
             </table>
-            <table style="width:100%;">
+            <table class="auto-style17">
                 <tr>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style18" style="text-align: center; font-size: large;">
+                        <br />
+                        8 x 4 Photo Prints<br />
+                        <br />
+                        From: £0.25<br />
+                        <br />
+                        <asp:Button ID="btn8x4" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
+                        <br />
+                    </td>
+                    <td class="auto-style19" style="font-size: large; text-align: center;">Black Frame Photo Print<br />
+                        <br />
+                        From: £10.00<br />
+                        <br />
+                        <asp:Button ID="btnblackframephoto" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
+                    </td>
+                    <td class="auto-style20" style="font-size: large; text-align: center">
+                        <br />
+                        Retro Photo Print<br />
+                        <br />
+                        From: £0.50<br />
+                        <br />
+                        <asp:Button ID="btnRetro" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style15">&nbsp;</td>
+                    <td class="auto-style16">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style9">&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td class="auto-style9">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style21"></td>
+                    <td class="auto-style22"></td>
+                    <td class="auto-style23"></td>
                 </tr>
             </table>
             <br />
