@@ -55,4 +55,11 @@ public partial class Signup : System.Web.UI.Page
             lblError1.Text = Error;
         }
     }
+
+
+
+    protected void txtEmailaddress_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

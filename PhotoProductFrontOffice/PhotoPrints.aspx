@@ -48,36 +48,41 @@
             width: 459px;
             height: 188px;
         }
-        .auto-style15 {
-            width: 466px;
-        }
         .auto-style16 {
-            width: 483px;
+            width: 526px;
         }
         .auto-style17 {
             width: 100%;
         }
-        .auto-style18 {
-            width: 466px;
-            height: 146px;
-        }
         .auto-style19 {
-            width: 483px;
+            width: 526px;
             height: 146px;
         }
         .auto-style20 {
             height: 146px;
-        }
-        .auto-style21 {
-            width: 466px;
-            height: 31px;
+            width: 516px;
         }
         .auto-style22 {
-            width: 483px;
+            width: 526px;
             height: 31px;
         }
         .auto-style23 {
             height: 31px;
+            width: 516px;
+        }
+        .auto-style24 {
+            width: 509px;
+            height: 146px;
+        }
+        .auto-style25 {
+            width: 509px;
+        }
+        .auto-style26 {
+            width: 509px;
+            height: 31px;
+        }
+        .auto-style27 {
+            width: 516px;
         }
     </style>
 </head>
@@ -94,10 +99,16 @@
             <br />
             <br />
             <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label3" runat="server" BackColor="#CCFFFF" Font-Size="XX-Large" Text="Photo Prints"></asp:Label>
+            <br />
+            <br />
 &nbsp;<br />
 &nbsp;<asp:Image ID="Image1" runat="server" Height="359px" ImageUrl="~/Gear-Photo-Prints-1226265565.jpg" Width="736px" />
 &nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Font-Names="Arial" Font-Size="Large" Height="350px" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" TextMode="MultiLine" Width="384px">
+            <asp:TextBox ID="TextBox1" runat="server" Font-Names="Arial" Font-Size="Large" Height="350px" OnTextChanged="TextBox1_TextChanged" ReadOnly="True" TextMode="MultiLine" Width="384px">Photo Prints
+
 I am sure you must have many different photos  that best describes your moments. Why not hold those precious captures in your hand with our high quality photo prints. It is very simple now, all you need to do is pick the print and upload your photo. </asp:TextBox>
             <br />
             <br />
@@ -164,7 +175,7 @@ I am sure you must have many different photos  that best describes your moments.
             </table>
             <table class="auto-style17">
                 <tr>
-                    <td class="auto-style18" style="text-align: center; font-size: large;">
+                    <td class="auto-style24" style="text-align: center; font-size: large;">
                         <br />
                         8 x 4 Photo Prints<br />
                         <br />
@@ -173,7 +184,9 @@ I am sure you must have many different photos  that best describes your moments.
                         <asp:Button ID="btn8x4" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
                         <br />
                     </td>
-                    <td class="auto-style19" style="font-size: large; text-align: center;">Black Frame Photo Print<br />
+                    <td class="auto-style19" style="font-size: large; text-align: center;">
+                        <br />
+                        Black Frame Photo Print<br />
                         <br />
                         From: £10.00<br />
                         <br />
@@ -190,12 +203,12 @@ I am sure you must have many different photos  that best describes your moments.
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style15">&nbsp;</td>
+                    <td class="auto-style25">&nbsp;</td>
                     <td class="auto-style16">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style27">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style21"></td>
+                    <td class="auto-style26"></td>
                     <td class="auto-style22"></td>
                     <td class="auto-style23"></td>
                 </tr>

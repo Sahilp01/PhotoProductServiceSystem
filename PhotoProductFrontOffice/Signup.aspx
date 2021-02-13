@@ -47,7 +47,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblEmailaddress" runat="server" Text="Email Address"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtEmailaddress" runat="server" Height="39px" Width="277px"></asp:TextBox>
+            <asp:TextBox ID="txtEmailaddress" runat="server" Height="39px" Width="277px" OnTextChanged="txtEmailaddress_TextChanged" TextMode="Email"></asp:TextBox>
             <br />
             <br />
             <br />
