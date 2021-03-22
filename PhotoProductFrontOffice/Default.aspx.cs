@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
 
 
 
-        SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Prisha16;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+        SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Sahilp01;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
         SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername.Text + "' AND Password= '" + txtPassword.Text + "'", con); // checks that the username and password that the user entered is there in login table or not.
         DataTable dt = new DataTable(); //this is creating a virtual table  
         sda.Fill(dt);
