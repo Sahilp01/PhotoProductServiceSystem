@@ -12,7 +12,42 @@ namespace PhotoProductClasses
 
         public string Valid(string productID, string productName, string productDescription, string productQuantity, string productPrice)
         {
-            return "";
+            String Error = "";
+            if (productID.Length == 0)
+            {
+                Error = Error + "ProductID is blanked|| ";
+            }
+
+            if (productName.Length == 0)
+            {
+                Error = Error + "ProductName is blanked|| ";
+            }
+
+            if (productDescription.Length == 0)
+            {
+                Error = Error + "ProductDescription is blanked|| ";
+            }
+
+            if (productQuantity.Length == 0)
+            {
+                Error = Error + "ProductQuantity is blanked|| ";
+            }
+
+            if (productPrice.Length == 0)
+            {
+                Error = Error + "ProductPrice is blanked|| ";
+            }
+            return Error;
+        }
+
+        public void Find(int productID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(clsProducts testItem)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -138,9 +138,7 @@ I am sure you must have many different photos  that best describes your moments.
                         Standard 6 x 4 Photo Prints<br />
                         <br />
                         From: £0.20<br />
-                        <br />
-                        <asp:Button ID="btnSelect" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
-                        <br />
+                       
                     </td>
                     <td class="auto-style13" style="font-size: large; text-align: center;">
                         <br />

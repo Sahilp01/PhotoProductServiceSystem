@@ -17,7 +17,7 @@ public partial class HomePage1 : System.Web.UI.Page
 
     protected void btnPrints_Click(object sender, EventArgs e)
     {
-        Response.Redirect("PhotoPrints.aspx");
+        Response.Redirect("productsList.aspx");
     }
 
     protected void btncanvas_Click(object sender, EventArgs e)

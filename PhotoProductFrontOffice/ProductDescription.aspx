@@ -31,15 +31,16 @@
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductDescription:&nbsp;
-            <asp:TextBox ID="txtProductDescription" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtProductDescription" runat="server" Height="38px" Width="414px"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp; ProductQuantity:&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductQuantity:&nbsp;
             <asp:TextBox ID="txtProductQuantity" runat="server"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp; ProductPrice:&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductPrice:&nbsp;&nbsp;
             <asp:TextBox ID="txtProductPrice" runat="server"></asp:TextBox>
+            <br />
             <br />
         </div>
     </form>
