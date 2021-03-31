@@ -4,11 +4,69 @@ namespace PhotoProductClasses
 {
     public class clsProducts
     {
-        public int ProductID { get; set; }
-        public string ProductName { get; set; }
-        public string ProductDescription { get; set; }
-        public int ProductQuantity { get; set; }
-        public decimal ProductPrice { get; set; }
+        private Int32 mProductID;
+        public int ProductID
+        {
+            get
+            {
+                return mProductID;
+            }
+            set
+            {
+                mProductID = value;
+            }
+        }
+        private string mProductName;
+        public string ProductName
+        {
+            get
+            {
+                return mProductName;
+            }
+            set
+            {
+                mProductName = value;
+            }
+        }
+
+        private string mProductDescription;
+        public string ProductDescription
+        {
+            get
+            {
+                return mProductDescription;
+            }
+            set
+            {
+                mProductDescription = value;
+            }
+        }
+
+        private Int32 mProductQuantity;
+        public int ProductQuantity
+        {
+            get
+            {
+                return mProductQuantity;
+            }
+            set
+            {
+                mProductQuantity = value;
+            }
+        }
+
+        private decimal mProductPrice;
+        public decimal ProductPrice
+        {
+            get
+            {
+                return mProductPrice;
+            }
+            set
+            {
+                mProductPrice = value;
+            }
+        }
 
         public string Valid(string productID, string productName, string productDescription, string productQuantity, string productPrice)
         {
@@ -40,14 +98,33 @@ namespace PhotoProductClasses
             return Error;
         }
 
-        public void Find(int productID)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public void Add(clsProducts testItem)
         {
             throw new NotImplementedException();
+        }
+
+        public bool Find(int ProductID)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ProductID", ProductID);
+            DB.Execute("sproc_tblProducts_FilterByProductID");
+            if (DB.Count == 1)
+            {
+                mProductID = Convert.ToInt32(DB.DataTable.Rows[0]["ProductID"]);
+                mProductName = Convert.ToString(DB.DataTable.Rows[0]["ProductName"]);
+                mProductDescription = Convert.ToString(DB.DataTable.Rows[0]["ProductDescription"]);
+                mProductQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["ProductQuantity"]);
+                mProductPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["ProductPrice"]);
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }

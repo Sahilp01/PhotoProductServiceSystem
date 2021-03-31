@@ -10,7 +10,7 @@ namespace PhotoProductTesting
         string ProductID = "1";
         string ProductName = "Standard 6 x 4 Photo Prints";
         string ProductDescription = "Standard 6 x 4 sized photo prints";
-        string ProductQuantity = "0";
+        string ProductQuantity = "1";
         string ProductPrice = "0";
 
         [TestMethod]
@@ -24,7 +24,7 @@ namespace PhotoProductTesting
         public void ProductIDOK()
         {
             clsProducts AnProducts = new clsProducts();
-            Int32 TestData = 1;
+            Int32 TestData = 2;
             AnProducts.ProductID = TestData;
             Assert.AreEqual(AnProducts.ProductID, TestData);
         }
@@ -51,7 +51,7 @@ namespace PhotoProductTesting
         public void ProductQuantityOk()
         {
             clsProducts AnProducts = new clsProducts();
-            Int32 TestData = 0;
+            Int32 TestData = 1;
             AnProducts.ProductQuantity = TestData;
             Assert.AreEqual(AnProducts.ProductQuantity, TestData);
         }
@@ -125,9 +125,93 @@ namespace PhotoProductTesting
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            Assert.IsTrue(Found);
+
+        }
 
 
+        [TestMethod]
+        public void ProductIDFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductID != 2)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
 
+        }
 
+        [TestMethod]
+        public void ProductNameFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductName != "Standard 6 x 4 Photo Prints")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductDescriptionFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductDescription != "Standard 6 x 4 sized photo prints")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductQuantityFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductQuantity != 1)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPriceFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductPrice != 0)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
     }
 }

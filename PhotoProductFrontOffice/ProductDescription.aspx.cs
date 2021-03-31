@@ -19,23 +19,21 @@ public partial class ProductDescription : System.Web.UI.Page
                 DisplayProduct();
             }
         }
-
-      
     }
 
-    void DisplayProduct()
-    {
-        clsProductsCollection ProductsList = new clsProductsCollection();
+        void DisplayProduct()
+        {
+            clsProductsCollection ProductsList = new clsProductsCollection();
 
-        ProductsList.ThisProduct.Find(ProductID);
+            ProductsList.ThisProduct.Find(ProductID);
 
-        txtProductID.Text = ProductsList.ThisProduct.ProductID.ToString();
-        txtProductName.Text = ProductsList.ThisProduct.ProductName;
-        txtProductDescription.Text = ProductsList.ThisProduct.ProductDescription;
-        txtProductQuantity.Text = ProductsList.ThisProduct.ProductQuantity.ToString();
-        txtProductPrice.Text = ProductsList.ThisProduct.ProductPrice.ToString();
+            txtProductID.Text = ProductsList.ThisProduct.ProductID.ToString();
+            txtProductName.Text = ProductsList.ThisProduct.ProductName;
+            txtProductDescription.Text = ProductsList.ThisProduct.ProductDescription;
+            txtProductQuantity.Text = ProductsList.ThisProduct.ProductQuantity.ToString();
+            txtProductPrice.Text = ProductsList.ThisProduct.ProductPrice.ToString();
 
 
 
+        }
     }
-}

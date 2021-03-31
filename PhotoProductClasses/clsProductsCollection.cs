@@ -6,6 +6,7 @@ namespace PhotoProductClasses
     public class clsProductsCollection
     {
         List<clsProducts> mProductsList = new List<clsProducts>();
+        clsProducts mThisProduct = new clsProducts();
         public List<clsProducts> ProductsList
         {
             get
@@ -18,16 +19,48 @@ namespace PhotoProductClasses
             }
         }
 
-        public clsProducts ThisProduct { get; set; }
+        public clsProducts ThisProduct
+        {
+            get
+            {
+                return mThisProduct;
+            }
+            set
+            {
+                mThisProduct = value;
+            }
+        }
+
+
+        public void ReportByProductID(string ProductID)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ProductID", ProductID);
+            DB.Execute("sproc_tblProducts_FilterByProductID");
+            PopulateArray(DB);
+        }
+
 
         public clsProductsCollection()
         {
-            Int32 Index = 0;
-            Int32 RecordCount = 0;
+
             clsDataConnection DB = new clsDataConnection();
             DB.Execute("sproc_tblProducts_SelectAll");
+            PopulateArray(DB);
 
+
+        }
+
+
+    
+
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            Int32 Index = 0;
+            Int32 RecordCount;
             RecordCount = DB.Count;
+            mProductsList = new List<clsProducts>();
             while (Index < RecordCount)
             {
                 clsProducts AnProducts = new clsProducts();
@@ -42,7 +75,6 @@ namespace PhotoProductClasses
 
             }
         }
-       
     }
 
 }
