@@ -17,7 +17,7 @@ public partial class HomePage1 : System.Web.UI.Page
 
     protected void btnPrints_Click(object sender, EventArgs e)
     {
-        Response.Redirect("productsList.aspx");
+        Response.Redirect("PhotoPrints.aspx");
     }
 
     protected void btncanvas_Click(object sender, EventArgs e)
@@ -25,3 +25,4 @@ public partial class HomePage1 : System.Web.UI.Page
         Response.Redirect("CanvasPrints.aspx");
     }
 }
+

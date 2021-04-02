@@ -36,4 +36,14 @@ public partial class ProductDescription : System.Web.UI.Page
 
 
         }
+
+    protected void txtProductDescription_TextChanged(object sender, EventArgs e)
+    {
+
     }
+
+    protected void btnAddtoBasket_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("BasketPage.aspx");
+    }
+}

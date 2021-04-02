@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBasket.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsProducts.cs" />

@@ -48,43 +48,7 @@
             width: 459px;
             height: 188px;
         }
-        .auto-style16 {
-            width: 526px;
-        }
-        .auto-style17 {
-            width: 100%;
-        }
-        .auto-style19 {
-            width: 526px;
-            height: 146px;
-        }
-        .auto-style20 {
-            height: 146px;
-            width: 516px;
-        }
-        .auto-style22 {
-            width: 526px;
-            height: 31px;
-        }
-        .auto-style23 {
-            height: 31px;
-            width: 516px;
-        }
-        .auto-style24 {
-            width: 509px;
-            height: 146px;
-        }
-        .auto-style25 {
-            width: 509px;
-        }
-        .auto-style26 {
-            width: 509px;
-            height: 31px;
-        }
-        .auto-style27 {
-            width: 516px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -146,80 +110,29 @@ I am sure you must have many different photos  that best describes your moments.
                         <br />
                         From: £0.20<br />
                         <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnSelectSqaure" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
-                    </td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td class="auto-style14" style="font-size: large; text-align: center;">Collage Prints
                         <br />
                         <br />
                         From: £6.99<br />
                         <br />
-                        <asp:Button ID="btnCollagePrints" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">
-                        <br />
-                        <asp:Image ID="Image5" runat="server" Height="245px" ImageUrl="~/8 x 6.jpg" Width="410px" />
-                        <br />
-                        <br />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:Image ID="Image6" runat="server" Height="243px" ImageUrl="~/black frame.jpg" Width="412px" />
-                    </td>
-                    <td class="auto-style11">
-                        <asp:Image ID="Image7" runat="server" Height="239px" ImageUrl="~/retro.jpg" Width="431px" />
-                    </td>
-                </tr>
-            </table>
-            <table class="auto-style17">
-                <tr>
-                    <td class="auto-style24" style="text-align: center; font-size: large;">
-                        <br />
-                        8 x 4 Photo Prints<br />
-                        <br />
-                        From: £0.25<br />
-                        <br />
-                        <asp:Button ID="btn8x4" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
-                        <br />
-                    </td>
-                    <td class="auto-style19" style="font-size: large; text-align: center;">
-                        <br />
-                        Black Frame Photo Print<br />
-                        <br />
-                        From: £10.00<br />
-                        <br />
-                        <asp:Button ID="btnblackframephoto" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
-                    </td>
-                    <td class="auto-style20" style="font-size: large; text-align: center">
-                        <br />
-                        Retro Photo Print<br />
-                        <br />
-                        From: £0.50<br />
-                        <br />
-                        <asp:Button ID="btnRetro" runat="server" BackColor="#CCFFFF" Font-Size="Large" Height="47px" Text="Select" Width="199px" />
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style25">&nbsp;</td>
-                    <td class="auto-style16">&nbsp;</td>
-                    <td class="auto-style27">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style26"></td>
-                    <td class="auto-style22"></td>
-                    <td class="auto-style23"></td>
-                </tr>
-            </table>
+                </table>
+            <br />
+            <br />
+         
+            <asp:ListBox ID="lstProductsList" runat="server" Font-Overline="True" Font-Size="XX-Large" Height="474px" Width="495px"></asp:ListBox>
+         
+            <br />
+            <br />
+            <br />
+            <asp:Button ID="btnSelectList" runat="server" BackColor="#CCFFFF" Font-Size="X-Large" Height="71px" OnClick="btnSelectList_Click" Text="Select" Width="209px" />
             <br />
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <asp:Label ID="lblerrorList" runat="server"></asp:Label>
             <br />
             <br />
             <br />
