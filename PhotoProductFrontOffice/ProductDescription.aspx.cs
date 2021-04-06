@@ -44,6 +44,29 @@ public partial class ProductDescription : System.Web.UI.Page
 
     protected void btnAddtoBasket_Click(object sender, EventArgs e)
     {
-        Response.Redirect("BasketPage.aspx");
+        clsBasket AnBasket = new clsBasket();
+
+        string ProductID = txtProductID.Text;
+        string Name = txtProductName.Text;
+        string Description = txtProductDescription.Text;
+        string Quantity = txtProductQuantity.Text;
+        string Price = txtProductPrice.Text;
+
+        string Error = "";
+        Error = AnBasket.Valid(ProductID, Name, Description, Quantity, Price);
+        if (Error == "")
+        {
+            AnBasket.ProductID = int.Parse(ProductID);
+            AnBasket.Name = Name;
+            AnBasket.Description = Description;
+            AnBasket.Quantity = int.Parse(Quantity); ;
+            AnBasket.Price = int.Parse(Price);
+
+            clsBasketCollection BasketList = new clsBasketCollection();
+            BasketList.ThisBasket = AnBasket;
+            BasketList.Add();
+            Response.Redirect("BasketPage.aspx");
+        }
+       
     }
 }

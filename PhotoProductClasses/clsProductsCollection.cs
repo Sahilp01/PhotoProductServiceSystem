@@ -47,8 +47,6 @@ namespace PhotoProductClasses
             clsDataConnection DB = new clsDataConnection();
             DB.Execute("sproc_tblProducts_SelectAll");
             PopulateArray(DB);
-
-
         }
 
 
