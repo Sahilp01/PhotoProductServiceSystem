@@ -23,7 +23,6 @@ namespace PhotoProductTesting
             clsBasket TestItem = new clsBasket();
             TestItem.ProductID = 2;
             TestItem.Name = "Standard 6 x 4 Photo Prints";
-            TestItem.Description = "Standard 6 x 4 sized photo prints";
             TestItem.Quantity = 1;
             TestItem.Price = 0;
 
@@ -39,7 +38,6 @@ namespace PhotoProductTesting
             clsBasket TestProduct = new clsBasket();
             TestProduct.ProductID = 2;
             TestProduct.Name = "Standard 6 x 4 Photo Prints";
-            TestProduct.Description = "Standard 6 x 4 sized photo prints";
             TestProduct.Quantity = 1;
             TestProduct.Price = 0;
             AllBaskets.ThisBasket = TestProduct;
@@ -55,7 +53,6 @@ namespace PhotoProductTesting
             Int32 PrimaryKey = 0;
             TestItem.ProductID = 2;
             TestItem.Name = "Standard 6 x 4 Photo Prints";
-            TestItem.Description = "Standard 6 x 4 sized photo prints";
             TestItem.Quantity = 1;
             TestItem.Price = 0;
             AllBaskets.ThisBasket = TestItem;

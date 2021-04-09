@@ -36,9 +36,11 @@ namespace PhotoProductClasses
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@ProductID", mThisBasket.ProductID);
             DB.AddParameter("@Name", mThisBasket.Name);
-            DB.AddParameter("@Description", mThisBasket.Description);
             DB.AddParameter("@Quantity", mThisBasket.Quantity);
-            DB.AddParameter("@Price", mThisBasket.Price);
+            DB.AddParameter("@Price", mThisBasket.Quantity * mThisBasket.Price);
+            DB.AddParameter("@Image", mThisBasket.Image);
+
+          
 
             return DB.Execute("sproc_tblBasket_Insert");
         }

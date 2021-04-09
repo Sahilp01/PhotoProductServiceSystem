@@ -51,16 +51,17 @@ public partial class ProductDescription : System.Web.UI.Page
         string Description = txtProductDescription.Text;
         string Quantity = txtProductQuantity.Text;
         string Price = txtProductPrice.Text;
+       // byte Image = FileUpload1;
 
         string Error = "";
-        Error = AnBasket.Valid(ProductID, Name, Description, Quantity, Price);
+        Error = AnBasket.Valid(ProductID, Name, Quantity, Price);
         if (Error == "")
         {
             AnBasket.ProductID = int.Parse(ProductID);
             AnBasket.Name = Name;
-            AnBasket.Description = Description;
             AnBasket.Quantity = int.Parse(Quantity); ;
             AnBasket.Price = int.Parse(Price);
+          //  AnBasket.Image = Image;
 
             clsBasketCollection BasketList = new clsBasketCollection();
             BasketList.ThisBasket = AnBasket;

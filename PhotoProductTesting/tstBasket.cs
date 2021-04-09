@@ -9,7 +9,6 @@ namespace PhotoProductTesting
     {
         string ProductID = "1";
         string Name = "Standard 6 x 4 Photo Prints";
-        string Description = "Standard 6 x 4 sized photo prints";
         string Quantity = "1";
         string Price = "0";
 
@@ -38,15 +37,6 @@ namespace PhotoProductTesting
         }
 
         [TestMethod]
-        public void ProductDescriptionOk()
-        {
-            clsBasket AnBasket = new clsBasket();
-            string TestData = "Standard 6 x 4 sized photo prints";
-            AnBasket.Description = TestData;
-            Assert.AreEqual(AnBasket.Description, TestData);
-        }
-
-        [TestMethod]
         public void ProductQuantityOk()
         {
             clsBasket AnBasket = new clsBasket();
@@ -64,12 +54,21 @@ namespace PhotoProductTesting
             Assert.AreEqual(AnBasket.Price, TestData);
         }
 
+       /* [TestMethod]
+        public void ImageOK()
+        {
+            clsBasket AnBasket = new clsBasket();
+             TestData = "":
+            AnBasket.Image = TestData;
+            Assert.AreEqual(AnBasket.Image, TestData);
+        }*/
+
         [TestMethod]
         public void ValidMethodOk()
         {
             clsBasket AnBasket = new clsBasket();
             String Error = "";
-            Error = AnBasket.Valid(ProductID, Name, Description, Quantity, Price);
+            Error = AnBasket.Valid(ProductID, Name, Quantity, Price);
             Assert.AreEqual(Error, "");
 
         }

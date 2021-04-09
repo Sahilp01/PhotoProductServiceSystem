@@ -56,6 +56,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductPrice:&nbsp;&nbsp; <asp:TextBox ID="txtProductPrice" runat="server" Font-Size="Medium" Height="50px" Width="213px"></asp:TextBox>
             <br />
             &nbsp;<br />
+            Upload your Picture:
+            <asp:FileUpload ID="FileUpload1" runat="server" Height="45px" Width="327px" />
+            <br />
             <br />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnAddtoBasket" runat="server" Text="Add to Basket" BackColor="#CCFFFF" Font-Size="X-Large" OnClick="btnAddtoBasket_Click" />

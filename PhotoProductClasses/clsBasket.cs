@@ -6,9 +6,9 @@ namespace PhotoProductClasses
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public Byte Image { get; set; }
 
        
 
@@ -22,7 +22,7 @@ namespace PhotoProductClasses
             return true;
         }
 
-        public string Valid(string productID, string name, string description, string quantity, string price)
+        public string Valid(string productID, string name, string quantity, string price)
         {
             return "";
         }
