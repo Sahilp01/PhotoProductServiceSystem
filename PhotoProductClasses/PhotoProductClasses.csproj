@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clsBasket.cs" />
     <Compile Include="clsBasketCollection.cs" />
+    <Compile Include="clsCheckout.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsProducts.cs" />

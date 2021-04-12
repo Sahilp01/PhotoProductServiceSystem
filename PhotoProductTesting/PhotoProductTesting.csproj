@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="tstBasket.cs" />
     <Compile Include="tstBasketCollection.cs" />
+    <Compile Include="tstCheckout.cs" />
     <Compile Include="tstProducts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstLogin.cs" />

@@ -12,7 +12,8 @@ public partial class BasketPage : System.Web.UI.Page
     private decimal total = (decimal)0.0;
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        txtTotal.Visible = false;
+        lblTotal.Visible = false;
     }
 
 
@@ -27,6 +28,8 @@ public partial class BasketPage : System.Web.UI.Page
         GridView1.DataSource = DT;
         GridView1.DataBind();
 
+        lblTotal.Visible = true;
+        txtTotal.Visible = true;
         decimal total = DT.AsEnumerable().Sum(row => row.Field<decimal>("Price"));
         txtTotal.Text = total.ToString();
     }
