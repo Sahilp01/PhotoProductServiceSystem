@@ -11,7 +11,7 @@
         }
     </style>
 </head>
-<body style="height: 1299px">
+<body style="height: 1437px">
     <form id="form1" runat="server">
         <div class="auto-style1" style="text-align: center">
             &nbsp;<br />
@@ -44,11 +44,11 @@
             <br />
             <br />
             Card Number:
-            <asp:TextBox ID="txtCardNumber" runat="server" Height="39px" Width="330px"></asp:TextBox>
+            <asp:TextBox ID="txtCardNumber" runat="server" Height="39px" Width="330px" MaxLength="16"></asp:TextBox>
             <br />
             <br />
             Expiry Date:&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtExpiryDate" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtExpiryDate" runat="server" TextMode="Month"></asp:TextBox>
             <br />
             <br />CVV:
             <asp:TextBox ID="txtCVV" runat="server"></asp:TextBox>
@@ -60,7 +60,11 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" Height="60px" Text="Confirm Order" Width="213px" />
+            <asp:Button ID="btnCheckout" runat="server" Height="60px" Text="Confirm Order" Width="213px" OnClick="Button1_Click" BackColor="#CCFFFF" Font-Size="Large" />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="lblCheckoutError" runat="server"></asp:Label>
         </div>
     </form>
 </body>

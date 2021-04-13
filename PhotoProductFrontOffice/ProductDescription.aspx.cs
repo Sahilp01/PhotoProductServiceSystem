@@ -32,9 +32,7 @@ public partial class ProductDescription : System.Web.UI.Page
             txtProductDescription.Text = ProductsList.ThisProduct.ProductDescription;
             txtProductQuantity.Text = ProductsList.ThisProduct.ProductQuantity.ToString();
             txtProductPrice.Text = ProductsList.ThisProduct.ProductPrice.ToString();
-
-
-
+        
         }
 
     protected void txtProductDescription_TextChanged(object sender, EventArgs e)

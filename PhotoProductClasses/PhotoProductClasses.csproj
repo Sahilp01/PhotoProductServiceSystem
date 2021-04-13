@@ -44,6 +44,7 @@
     <Compile Include="clsBasket.cs" />
     <Compile Include="clsBasketCollection.cs" />
     <Compile Include="clsCheckout.cs" />
+    <Compile Include="clsCheckoutCollection.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsProducts.cs" />
