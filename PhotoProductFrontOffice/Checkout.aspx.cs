@@ -2,6 +2,7 @@
 using PhotoProductClasses;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -13,10 +14,7 @@ public partial class Checkout : System.Web.UI.Page
     Int32 CustomerID;
     protected void Page_Load(object sender, EventArgs e)
     {
-        CustomerID = Convert.ToInt32(Session["CustomerID"]);
-
-    
-
+        /*CustomerID = Convert.ToInt32(Session["CustomerID"]);
         if (IsPostBack == false)
         {
             if (CustomerID != 1)
@@ -24,8 +22,32 @@ public partial class Checkout : System.Web.UI.Page
                 DisplayProduct();
             }
         }
-    }
 
+        clsSignUp AnSignUp = new clsSignUp();
+        AnSignUp = (clsSignUp)Session["AnSignUp"];
+
+        string CustomerID = AnSignUp.CustomerID.ToString();
+        string Address = AnSignUp.Address.ToString();
+
+       txtCustomerID1.Text = CustomerID;
+         txtAddress.Text = Address;
+         */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+    /*
     void DisplayProduct()
     {
         clsSignUpCollection SignUpList = new clsSignUpCollection();
@@ -34,7 +56,7 @@ public partial class Checkout : System.Web.UI.Page
         txtCustomerID1.Text = SignUpList.ThisSignUp.CustomerID.ToString();
        // txtAddress.Text = SignUpList.ThisSignUp.Address.ToString();
 
-    }
+    }*/
 
 
 
@@ -75,5 +97,16 @@ public partial class Checkout : System.Web.UI.Page
         {
             lblCheckoutError.Text = Error;
         }
+    }
+
+    protected void txtCustomerID1_TextChanged(object sender, EventArgs e)
+    {
+        SqlConnection sqlcon = new SqlConnection("Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Fyproject123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30; ");
+        SqlDataAdapter SQLadapter = new SqlDataAdapter("SELECT CustomerID from tblSignUp ", sqlcon);
+        DataTable DT = new DataTable();
+
+        SQLadapter.Fill(DT);
+        txtCustomerID1.Text = DT.ToString();
+        txtCustomerID1.DataBind();
     }
 }

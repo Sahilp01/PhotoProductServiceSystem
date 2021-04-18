@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 1388px;
+            height: 1605px;
         }
     *{box-sizing:border-box}
         *{text-shadow:none!important;box-shadow:none!important}
@@ -58,6 +58,10 @@
             &nbsp;<br />
             Upload your Picture:
             <asp:FileUpload ID="FileUpload1" runat="server" Height="45px" Width="327px" />
+            <br />
+            <br />
+            PointsReceived:
+            <asp:TextBox ID="txtPointsReceived" runat="server" Height="35px" Width="204px" ReadOnly="True"></asp:TextBox>
             <br />
             <br />
 &nbsp;&nbsp;&nbsp;

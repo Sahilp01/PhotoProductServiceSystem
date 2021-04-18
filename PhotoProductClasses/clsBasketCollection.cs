@@ -38,10 +38,8 @@ namespace PhotoProductClasses
             DB.AddParameter("@Name", mThisBasket.Name);
             DB.AddParameter("@Quantity", mThisBasket.Quantity);
             DB.AddParameter("@Price", mThisBasket.Quantity * mThisBasket.Price);
+            DB.AddParameter("@PointsReceived", mThisBasket.PointsReceived * mThisBasket.Quantity);
            
-
-          
-
             return DB.Execute("sproc_tblBasket_Insert");
         }
     }

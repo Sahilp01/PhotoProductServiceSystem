@@ -12,6 +12,7 @@ namespace PhotoProductTesting
         string ProductDescription = "Standard 6 x 4 sized photo prints";
         string ProductQuantity = "1";
         string ProductPrice = "0";
+        string ProductPoints = "5";
 
         [TestMethod]
         public void InstanceOK()
@@ -66,11 +67,20 @@ namespace PhotoProductTesting
         }
 
         [TestMethod]
+        public void ProductPointsOK()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Int32 TestData = 5;
+            AnProducts.ProductPoints = TestData;
+            Assert.AreEqual(AnProducts.ProductPoints, TestData);
+        }
+
+        [TestMethod]
         public void ValidMethodOk()
         {
             clsProducts AnProducts = new clsProducts();
             String Error = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreEqual(Error, "");
         
         }
@@ -81,7 +91,7 @@ namespace PhotoProductTesting
             clsProducts AnProducts = new clsProducts();
             String Error = "";
             string ProductID = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -91,7 +101,7 @@ namespace PhotoProductTesting
             clsProducts AnProducts = new clsProducts();
             String Error = "";
             string ProductName = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -101,7 +111,7 @@ namespace PhotoProductTesting
             clsProducts AnProducts = new clsProducts();
             String Error = "";
             string ProductDescription = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -111,7 +121,7 @@ namespace PhotoProductTesting
             clsProducts AnProducts = new clsProducts();
             String Error = "";
             string Quantity = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -121,7 +131,17 @@ namespace PhotoProductTesting
             clsProducts AnProducts = new clsProducts();
             String Error = "";
             string ProductPrice = "";
-            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice);
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ProductPointsinLessOne()
+        {
+            clsProducts AnProducts = new clsProducts();
+            String Error = "";
+            string ProductPoints = "";
+            Error = AnProducts.Valid(ProductID, ProductName, ProductDescription, ProductQuantity, ProductPrice, ProductPoints);
             Assert.AreNotEqual(Error, "");
         }
 
@@ -208,6 +228,21 @@ namespace PhotoProductTesting
             Int32 ProductID = 2;
             Found = AnProducts.Find(ProductID);
             if (AnProducts.ProductPrice != 0)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ProductPointsFound()
+        {
+            clsProducts AnProducts = new clsProducts();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ProductID = 2;
+            Found = AnProducts.Find(ProductID);
+            if (AnProducts.ProductPoints != 0)
             {
                 OK = false;
             }

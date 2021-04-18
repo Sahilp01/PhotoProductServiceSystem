@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 996px;
+            height: 1084px;
         }
         .auto-style2 {
             margin-top: 0px;
@@ -36,7 +36,15 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblTotal" runat="server" Font-Size="X-Large" Text="TotalPrice :"></asp:Label>
 &nbsp;&nbsp;
-            <asp:TextBox ID="txtTotal" runat="server" Font-Size="X-Large" Height="42px" Width="307px"></asp:TextBox>
+            <asp:TextBox ID="txtTotal" runat="server" Font-Size="X-Large" Height="42px" Width="307px" ReadOnly="True"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="lblTotal0" runat="server" Font-Size="X-Large" Text="TotalPointsReceived: "></asp:Label>
+&nbsp;<asp:TextBox ID="txtPointsTotal" runat="server" Height="33px" Width="253px" ReadOnly="True"></asp:TextBox>
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
             <br />
             <br />
             <br />

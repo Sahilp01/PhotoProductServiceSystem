@@ -28,7 +28,7 @@
             <br />
             <br />
             CustomerID:&nbsp;
-            <asp:TextBox ID="txtCustomerID1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCustomerID1" runat="server" OnTextChanged="txtCustomerID1_TextChanged"></asp:TextBox>
             <br />
             <br />
             First Name:&nbsp;&nbsp;&nbsp;

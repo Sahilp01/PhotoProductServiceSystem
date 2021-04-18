@@ -5,11 +5,11 @@ namespace PhotoProductClasses
 {
     public class clsSignUp
     {
-       // List<clsSignUp> mSignUpList = new List<clsSignUp>();
+      // List<clsSignUp> mSignUpList = new List<clsSignUp>();
        // clsSignUp mthisSignUp = new clsSignUp();
 
  
-        public int CustomerID { get; set; }
+       // public int CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
@@ -22,7 +22,24 @@ namespace PhotoProductClasses
             return true;
         }
 
-        /* public clsSignUp ThisSignUp
+
+     
+
+        public Int32 mCustmerID;
+
+        public Int32 CustomerID
+        {
+            get
+            {
+                return mCustmerID;
+            }
+            set
+            {
+                mCustmerID = value;
+            }
+        }
+
+        /*public clsSignUp ThisSignUp
 {
     get
     {

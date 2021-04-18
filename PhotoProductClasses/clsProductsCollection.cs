@@ -67,6 +67,7 @@ namespace PhotoProductClasses
                 AnProducts.ProductDescription = Convert.ToString(DB.DataTable.Rows[Index]["ProductDescription"]);
                 AnProducts.ProductQuantity = Convert.ToInt32(DB.DataTable.Rows[Index]["ProductQuantity"]);
                 AnProducts.ProductPrice = Convert.ToDecimal(DB.DataTable.Rows[Index]["ProductPrice"]);
+                AnProducts.ProductPoints = Convert.ToInt32(DB.DataTable.Rows[Index]["ProductPoints"]);
 
                 mProductsList.Add(AnProducts);
                 Index++;

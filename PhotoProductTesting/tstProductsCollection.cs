@@ -26,6 +26,7 @@ namespace PhotoProductTesting
             TestItem.ProductDescription = "Standard 6 x 4 sized photo prints";
             TestItem.ProductQuantity = 1;
             TestItem.ProductPrice = 0;
+            TestItem.ProductPoints = 5;
 
             TestItem.Add(TestItem);
             AllProducts.ProductsList = TestList;
@@ -41,6 +42,7 @@ namespace PhotoProductTesting
             TestProduct.ProductDescription = "Standard 6 x 4 sized photo prints";
             TestProduct.ProductQuantity = 1;
             TestProduct.ProductPrice = 0;
+            TestProduct.ProductPoints = 5;
             AllProducts.ThisProduct = TestProduct;
             Assert.AreEqual(AllProducts.ThisProduct, TestProduct);
 

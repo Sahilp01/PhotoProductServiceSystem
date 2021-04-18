@@ -19,6 +19,9 @@ public partial class ProductDescription : System.Web.UI.Page
                 DisplayProduct();
             }
         }
+
+        clsSignUp AnSignUp = new clsSignUp();
+        AnSignUp = (clsSignUp)Session["AnSignUp"];
     }
 
         void DisplayProduct()
@@ -32,8 +35,10 @@ public partial class ProductDescription : System.Web.UI.Page
             txtProductDescription.Text = ProductsList.ThisProduct.ProductDescription;
             txtProductQuantity.Text = ProductsList.ThisProduct.ProductQuantity.ToString();
             txtProductPrice.Text = ProductsList.ThisProduct.ProductPrice.ToString();
-        
-        }
+            txtPointsReceived.Text = ProductsList.ThisProduct.ProductPoints.ToString();
+    }
+
+
 
     protected void txtProductDescription_TextChanged(object sender, EventArgs e)
     {
@@ -46,24 +51,27 @@ public partial class ProductDescription : System.Web.UI.Page
 
         string ProductID = txtProductID.Text;
         string Name = txtProductName.Text;
-        string Description = txtProductDescription.Text;
+       // string Description = txtProductDescription.Text;
         string Quantity = txtProductQuantity.Text;
         string Price = txtProductPrice.Text;
+        string PointsReceived = txtPointsReceived.Text;
        // byte Image = FileUpload1;
 
         string Error = "";
-        Error = AnBasket.Valid(ProductID, Name, Quantity, Price);
+        Error = AnBasket.Valid(ProductID, Name, Quantity, Price, PointsReceived);
         if (Error == "")
         {
             AnBasket.ProductID = int.Parse(ProductID);
             AnBasket.Name = Name;
             AnBasket.Quantity = int.Parse(Quantity); ;
             AnBasket.Price = int.Parse(Price);
+            AnBasket.PointsReceived = int.Parse(PointsReceived);
           //  AnBasket.Image = Image;
 
             clsBasketCollection BasketList = new clsBasketCollection();
             BasketList.ThisBasket = AnBasket;
             BasketList.Add();
+            
             Response.Redirect("BasketPage.aspx");
         }
        

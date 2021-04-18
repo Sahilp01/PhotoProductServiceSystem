@@ -68,37 +68,56 @@ namespace PhotoProductClasses
             }
         }
 
-        public string Valid(string productID, string productName, string productDescription, string productQuantity, string productPrice)
+        private Int32 mProductPoints;
+        public int ProductPoints
         {
-            String Error = "";
-            if (productID.Length == 0)
+            get
             {
-                Error = Error + "ProductID is blanked|| ";
+                return mProductPoints;
             }
-
-            if (productName.Length == 0)
+            set
             {
-                Error = Error + "ProductName is blanked|| ";
+                mProductPoints = value;
             }
-
-            if (productDescription.Length == 0)
-            {
-                Error = Error + "ProductDescription is blanked|| ";
-            }
-
-            if (productQuantity.Length == 0)
-            {
-                Error = Error + "ProductQuantity is blanked|| ";
-            }
-
-            if (productPrice.Length == 0)
-            {
-                Error = Error + "ProductPrice is blanked|| ";
-            }
-            return Error;
         }
 
-      
+        public string Valid(string productID, string productName, string productDescription, string productQuantity, string productPrice, string productPoints)
+        {
+              String Error = "";
+              if (productID.Length == 0)
+              {
+                  Error = Error + "ProductID is blanked|| ";
+              }
+
+              if (productName.Length == 0)
+              {
+                  Error = Error + "ProductName is blanked|| ";
+              }
+
+              if (productDescription.Length == 0)
+              {
+                  Error = Error + "ProductDescription is blanked|| ";
+              }
+
+              if (productQuantity.Length == 0)
+              {
+                  Error = Error + "ProductQuantity is blanked|| ";
+              }
+
+              if (productPrice.Length == 0)
+              {
+                  Error = Error + "ProductPrice is blanked|| ";
+              }
+
+            if (productPoints.Length == 0)
+            {
+                Error = Error + "ProductPoints is blanked|| ";
+            }
+            return Error;
+          }
+
+       
+       
 
         public void Add(clsProducts testItem)
         {
@@ -117,6 +136,7 @@ namespace PhotoProductClasses
                 mProductDescription = Convert.ToString(DB.DataTable.Rows[0]["ProductDescription"]);
                 mProductQuantity = Convert.ToInt32(DB.DataTable.Rows[0]["ProductQuantity"]);
                 mProductPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["ProductPrice"]);
+                mProductPoints = Convert.ToInt32(DB.DataTable.Rows[0]["ProductPoints"]);
                 return true;
             }
 
@@ -126,5 +146,8 @@ namespace PhotoProductClasses
             }
             
         }
+
+        
+        
     }
 }

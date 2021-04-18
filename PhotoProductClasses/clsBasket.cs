@@ -9,8 +9,7 @@ namespace PhotoProductClasses
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public Byte Image { get; set; }
-
-       
+        public int PointsReceived { get; set; }
 
         public void Add(clsBasket testItem)
         {
@@ -22,7 +21,9 @@ namespace PhotoProductClasses
             return true;
         }
 
-        public string Valid(string productID, string name, string quantity, string price)
+       
+   
+        public string Valid(string productID, string name, string quantity, string price, string pointsReceived)
         {
             return "";
         }

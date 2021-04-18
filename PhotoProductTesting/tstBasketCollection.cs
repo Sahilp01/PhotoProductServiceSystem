@@ -25,6 +25,7 @@ namespace PhotoProductTesting
             TestItem.Name = "Standard 6 x 4 Photo Prints";
             TestItem.Quantity = 1;
             TestItem.Price = 0;
+            TestItem.PointsReceived = 5;
 
             TestItem.Add(TestItem);
             AllBaskets.BasketList = TestList;
@@ -40,6 +41,7 @@ namespace PhotoProductTesting
             TestProduct.Name = "Standard 6 x 4 Photo Prints";
             TestProduct.Quantity = 1;
             TestProduct.Price = 0;
+            TestProduct.PointsReceived = 5;
             AllBaskets.ThisBasket = TestProduct;
             Assert.AreEqual(AllBaskets.ThisBasket, TestProduct);
 
@@ -55,6 +57,7 @@ namespace PhotoProductTesting
             TestItem.Name = "Standard 6 x 4 Photo Prints";
             TestItem.Quantity = 1;
             TestItem.Price = 0;
+            TestItem.PointsReceived = 5;
             AllBaskets.ThisBasket = TestItem;
             PrimaryKey = AllBaskets.Add();
             TestItem.ProductID = PrimaryKey;
