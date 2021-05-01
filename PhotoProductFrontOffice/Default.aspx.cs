@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         clsLogin AnLogin = new clsLogin();
-        AnLogin = (clsLogin)Session["Default"];
+        AnLogin = (clsLogin)Session["AnLogin"];
         // Response.Write(AnLogin.Username);
         // Response.Write(AnLogin.Password);
 
@@ -54,7 +54,7 @@ public partial class _Default : System.Web.UI.Page
         sda.Fill(dt);
         if (dt.Rows[0][0].ToString() == "1")
         {
-
+            Session["UserName"] = Username;
             Response.Redirect("HomePage1.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
 
         }

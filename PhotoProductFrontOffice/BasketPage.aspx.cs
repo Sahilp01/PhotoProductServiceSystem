@@ -51,6 +51,7 @@ public partial class BasketPage : System.Web.UI.Page
 
     protected void btnCheckout_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Checkout.aspx");
+        // Response.Redirect("Checkout.aspx");
+        Response.Redirect("ConfirmDetails.aspx");
     }
 }
