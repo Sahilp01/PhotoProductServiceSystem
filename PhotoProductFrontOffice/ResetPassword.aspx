@@ -5,10 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 1573px;
+        }
+    </style>
 </head>
-<body style="height: 651px">
+<body style="height: 1579px">
     <form id="form1" runat="server">
-        <div>
+        <div class="auto-style1" style="text-align: center">
+            <br />
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image1" runat="server" Height="171px" ImageUrl="~/Logo for website.JPG" Width="372px" />
+            <br />
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Welcome to PhotoPerfect" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
@@ -18,6 +29,7 @@
             <br />
             <br />
             <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;<asp:Label ID="lblLogin" runat="server" BackColor="#CCFFFF" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Text="Update your password" Font-Names="Lucida Handwriting"></asp:Label>
             <br />
             <br />

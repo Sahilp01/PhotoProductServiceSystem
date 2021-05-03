@@ -16,6 +16,8 @@
         <div class="auto-style1" style="text-align: center">
             <br />
             <br />
+            <asp:Image ID="Image1" runat="server" Height="194px" ImageUrl="~/Logo for website.JPG" Width="393px" />
+            <br />
             <br />
             <asp:Label ID="Label1" runat="server" Text="Welcome to PhotoPerfect" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
             <br />

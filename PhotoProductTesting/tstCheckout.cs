@@ -8,14 +8,11 @@ namespace PhotoProductTesting
     public class tstCheckout
     {
 
-        string CustomerID = "1";
-        string FirstName = "Sahil";
-        string LastName = "Patel";
         string NameOnCard = "SAHIL PATEL";
         string CardNumber = "1234567890987654";
         string ExpiryDate = "2022/12";
         string CVV = "123";
-        string Address = "1 Test Street";
+        
 
 
 
@@ -25,33 +22,7 @@ namespace PhotoProductTesting
             clsCheckout AnCheckout = new clsCheckout();
             Assert.IsNotNull(AnCheckout);
         }
-
-        [TestMethod]
-        public void CustomerIDOK()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            Int32 TestData = 1;
-            AnCheckout.CustomerID = TestData;
-            Assert.AreEqual(AnCheckout.CustomerID, TestData);
-        }
-
-        [TestMethod]
-        public void FirstNameOK()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            string TestData = "Sahil";
-            AnCheckout.FirstName = TestData;
-            Assert.AreEqual(AnCheckout.FirstName, TestData);
-        }
-
-        [TestMethod]
-        public void LastNameOK()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            string TestData = "Patel";
-            AnCheckout.LastName = TestData;
-            Assert.AreEqual(AnCheckout.LastName, TestData);
-        }
+        
 
         [TestMethod]
         public void NameOnCardOK()
@@ -89,54 +60,19 @@ namespace PhotoProductTesting
             Assert.AreEqual(AnCheckout.CVV, TestData);
         }
 
-        [TestMethod]
-        public void AddressOK()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            string TestData = "1 Test Street";
-            AnCheckout.Address = TestData;
-            Assert.AreEqual(AnCheckout.Address, TestData);
-        }
+       
 
         [TestMethod]
         public void ValidMethodOk()
         {
             clsCheckout AnCheckout = new clsCheckout();
             String Error = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
+            Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV );
             Assert.AreEqual(Error, "");
 
         }
 
-        [TestMethod]
-        public void CustomerIDMinLessOne()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            String Error = "";
-            string CustomerID = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
-            Assert.AreEqual(Error, "");
-        }
 
-        [TestMethod]
-        public void FirstNameMinLessOne()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            String Error = "";
-            string FirstName = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void LastNameMinLessOne()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            String Error = "";
-            string LastName = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
-            Assert.AreEqual(Error, "");
-        }
 
         [TestMethod]
         public void NameOnCardMinLessOne()
@@ -144,7 +80,7 @@ namespace PhotoProductTesting
             clsCheckout AnCheckout = new clsCheckout();
             String Error = "";
             string NameOnCard = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
+            Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV);
             Assert.AreEqual(Error, "");
         }
 
@@ -154,7 +90,7 @@ namespace PhotoProductTesting
             clsCheckout AnCheckout = new clsCheckout();
             String Error = "";
             string CardNumber = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
+            Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV);
             Assert.AreEqual(Error, "");
         }
 
@@ -164,7 +100,7 @@ namespace PhotoProductTesting
             clsCheckout AnCheckout = new clsCheckout();
             String Error = "";
             string ExpiryDate = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
+            Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV);
             Assert.AreEqual(Error, "");
         }
 
@@ -174,19 +110,11 @@ namespace PhotoProductTesting
             clsCheckout AnCheckout = new clsCheckout();
             String Error = "";
             string CVV = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
+            Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV);
             Assert.AreEqual(Error, "");
         }
 
-        [TestMethod]
-        public void AddressMinLessOne()
-        {
-            clsCheckout AnCheckout = new clsCheckout();
-            String Error = "";
-            string Address = "";
-            Error = AnCheckout.Valid(CustomerID, FirstName, LastName, NameOnCard, CardNumber, ExpiryDate, CVV, Address);
-            Assert.AreEqual(Error, "");
-        }
+      
     }
 
  }

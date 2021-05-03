@@ -55,7 +55,7 @@ public partial class _Default : System.Web.UI.Page
         if (dt.Rows[0][0].ToString() == "1")
         {
             Session["UserName"] = Username;
-            Response.Redirect("HomePage1.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
+            Response.Redirect("PhotoPrints.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
 
         }
 

@@ -14,8 +14,12 @@
 <body style="height: 1437px">
     <form id="form1" runat="server">
         <div class="auto-style1" style="text-align: center">
-            &nbsp;<br />
             <br />
+            <br />
+            <br />
+            <asp:Image ID="Image1" runat="server" Height="195px" ImageUrl="~/Logo for website.JPG" Width="440px" />
+            <br />
+            &nbsp;<br />
             <br />
             <asp:Label ID="Label1" runat="server" Text="Welcome to PhotoPerfect" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
             <br />
@@ -26,17 +30,6 @@
             <br />
             <asp:Label ID="Label2" runat="server" Font-Size="XX-Large" Text="Checkout"></asp:Label>
             <br />
-            <br />
-            CustomerID:&nbsp;
-            <asp:TextBox ID="txtCustomerID1" runat="server" OnTextChanged="txtCustomerID1_TextChanged"></asp:TextBox>
-            <br />
-            <br />
-            First Name:&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtFirstN" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            Last Name:&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtLastN" runat="server"></asp:TextBox>
             <br />
             <br />
             Name on Card:
@@ -52,10 +45,6 @@
             <br />
             <br />CVV:
             <asp:TextBox ID="txtCVV" runat="server"></asp:TextBox>
-            <br />
-            <br />
-           Address:
-            <asp:TextBox ID="txtAddress" runat="server" Height="38px" Width="317px"></asp:TextBox>
             <br />
             <br />
             <br />

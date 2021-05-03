@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 1084px;
+            height: 1579px;
         }
         .auto-style2 {
             margin-top: 0px;
@@ -17,6 +17,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1" style="text-align: center">
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Image ID="Image1" runat="server" Height="188px" ImageUrl="~/Logo for website.JPG" Width="422px" />
+            <br />
+            <br />
             <br />
             <asp:Label ID="Label1" runat="server" Text="Welcome to PhotoPerfect" BackColor="#CCFFFF" Font-Bold="True" Font-Italic="True" Font-Names="Lucida Handwriting" Font-Size="XX-Large" ForeColor="Black"></asp:Label>
             <br />

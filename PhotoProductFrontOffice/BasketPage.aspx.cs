@@ -14,6 +14,10 @@ public partial class BasketPage : System.Web.UI.Page
     {
         txtTotal.Visible = false;
         lblTotal.Visible = false;
+
+        txtPointsTotal.Visible = false;
+        lblTotal0.Visible = false;
+        
     }
 
 
@@ -30,9 +34,15 @@ public partial class BasketPage : System.Web.UI.Page
 
         lblTotal.Visible = true;
         txtTotal.Visible = true;
+
+        txtPointsTotal.Visible = true;
+        lblTotal0.Visible = true;
+
+    
         decimal total = DT.AsEnumerable().Sum(row => row.Field<decimal>("Price"));
         txtTotal.Text = total.ToString();
 
+        
         decimal TotalPoints = DT.AsEnumerable().Sum(row => row.Field<int>("PointsReceived"));
         txtPointsTotal.Text = TotalPoints.ToString();
     }
