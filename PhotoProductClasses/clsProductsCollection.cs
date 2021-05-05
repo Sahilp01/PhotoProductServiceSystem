@@ -31,6 +31,18 @@ namespace PhotoProductClasses
             }
         }
 
+        public int Count
+        {
+            get
+            {
+                return mProductsList.Count;
+            }
+            set
+            {
+
+            }
+        
+        }
 
         public void ReportByProductID(string ProductID)
         {
@@ -39,6 +51,11 @@ namespace PhotoProductClasses
             DB.Execute("sproc_tblProducts_FilterByProductID");
             PopulateArray(DB);
         }
+
+        /*clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ProductName", ProductName);
+            DB.Execute("sproc_tblProducts_FilterByProductName");
+            PopulateArray(DB);*/
 
 
         public clsProductsCollection()
@@ -50,9 +67,7 @@ namespace PhotoProductClasses
         }
 
 
-    
-
-
+  
         void PopulateArray(clsDataConnection DB)
         {
             Int32 Index = 0;
@@ -73,6 +88,14 @@ namespace PhotoProductClasses
                 Index++;
 
             }
+        }
+
+        public void ReportByProductName(string ProductName)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ProductName", ProductName);
+            DB.Execute("sproc_tblProducts_FilterByProductName");
+            PopulateArray(DB);
         }
     }
 

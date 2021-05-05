@@ -53,7 +53,7 @@
             &nbsp;
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductPrice:&nbsp;&nbsp; <asp:TextBox ID="txtProductPrice" runat="server" Font-Size="Medium" Height="50px" Width="213px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProductPrice (£):&nbsp;&nbsp; <asp:TextBox ID="txtProductPrice" runat="server" Font-Size="Medium" Height="50px" Width="213px"></asp:TextBox>
             <br />
             &nbsp;<br />
             Upload your Picture:

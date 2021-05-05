@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhotoProductClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -36,7 +37,7 @@ public partial class PhotoPrints : System.Web.UI.Page
     protected void btnSelectList_Click(object sender, EventArgs e)
     {
         Int32 ProductID;
-        if (lstProductsList.SelectedIndex != 1)
+        if (lstProductsList.SelectedIndex != -1)
         {
             ProductID = Convert.ToInt32(lstProductsList.SelectedValue);
             Session["ProductID"] = ProductID;
@@ -48,5 +49,26 @@ public partial class PhotoPrints : System.Web.UI.Page
         }
     }
 
-  
+
+
+   protected void btnApply_Click(object sender, EventArgs e)
+    {
+        clsProductsCollection Products = new clsProductsCollection();
+        Products.ReportByProductName(txtFilter.Text);
+        lstProductsList.DataSource = Products.ProductsList;
+        lstProductsList.DataValueField = "ProductID";
+        lstProductsList.DataTextField = "ProductName";
+        lstProductsList.DataBind();
+    }
+
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        clsProductsCollection Products = new clsProductsCollection();
+        Products.ReportByProductName("");
+        txtFilter.Text = "";
+        lstProductsList.DataSource = Products.ProductsList;
+        lstProductsList.DataValueField = "ProductID";
+        lstProductsList.DataTextField = "ProductName";
+        lstProductsList.DataBind();
+    }
 }

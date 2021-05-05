@@ -9,7 +9,7 @@ using System.Data;
 
 public partial class BasketPage : System.Web.UI.Page
 {
-    
+
     protected void Page_Load(object sender, EventArgs e)
     {
         txtTotal.Visible = false;
@@ -17,8 +17,23 @@ public partial class BasketPage : System.Web.UI.Page
 
         txtPointsTotal.Visible = false;
         lblTotal0.Visible = false;
-        
+
+        if (IsPostBack == false)
+        {
+            DisplayProducts();
+        }
     }
+
+        void DisplayProducts()
+        {
+            PhotoProductClasses.clsBasketCollection Baskets = new PhotoProductClasses.clsBasketCollection();
+            lstDelete.DataSource = Baskets.BasketList;
+            lstDelete.DataValueField = "ProductID";
+            lstDelete.DataTextField = "Name";
+            lstDelete.DataBind();
+
+        }
+    
 
 
 
@@ -63,5 +78,22 @@ public partial class BasketPage : System.Web.UI.Page
     {
         // Response.Redirect("Checkout.aspx");
         Response.Redirect("ConfirmDetails.aspx");
+    }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        Int32 ProductID;
+        if(lstDelete.SelectedIndex != -1)
+        {
+            ProductID = Convert.ToInt32(lstDelete.SelectedValue);
+            Session["ProductID"] = ProductID;
+            //Session["ProductID"] = ProductID;
+            Response.Redirect("DeleteProduct.aspx");
+        }
+        else
+        {
+            lblDelete.Text = "Please select a product to delete from the basket";
+        }
+
     }
 }

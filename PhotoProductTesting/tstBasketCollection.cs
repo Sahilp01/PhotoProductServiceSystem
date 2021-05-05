@@ -56,13 +56,33 @@ namespace PhotoProductTesting
             TestItem.ProductID = 2;
             TestItem.Name = "Standard 6 x 4 Photo Prints";
             TestItem.Quantity = 1;
-            TestItem.Price = 0;
+            TestItem.Price = 1;
             TestItem.PointsReceived = 5;
             AllBaskets.ThisBasket = TestItem;
             PrimaryKey = AllBaskets.Add();
             TestItem.ProductID = PrimaryKey;
 
             AllBaskets.ThisBasket.Find(PrimaryKey);
+            Assert.AreEqual(AllBaskets.ThisBasket, TestItem);
+        }
+
+        [TestMethod]
+        public void DeleteMethodOk()
+        {
+            clsBasketCollection AllBaskets = new clsBasketCollection();
+            clsBasket TestItem = new clsBasket();
+            Int32 PrimaryKey = 0;
+            TestItem.ProductID = 2;
+            TestItem.Name = "Standard 6 x 4 Photo Prints";
+            TestItem.Quantity = 1;
+            TestItem.Price = 1;
+            TestItem.PointsReceived = 5;
+            AllBaskets.ThisBasket = TestItem;
+            PrimaryKey = AllBaskets.Add();
+            TestItem.ProductID = PrimaryKey;
+            AllBaskets.ThisBasket.Find(PrimaryKey);
+            AllBaskets.Delete();
+            Boolean Found = AllBaskets.ThisBasket.Find(PrimaryKey);
             Assert.AreEqual(AllBaskets.ThisBasket, TestItem);
         }
     }

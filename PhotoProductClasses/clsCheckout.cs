@@ -22,14 +22,10 @@ namespace PhotoProductClasses
             {
                 Error = Error + "Please Enter your Last Name || ";
             }
-            /*if (cardNumber.Length == 0)
-            {
-                Error = Error + "Please Enter your Card Number || ";
-            }
             if (cardNumber.Length != 16)
             {
                 Error = Error + "Please Enter correct Card Number || ";
-            }*/
+            }
             if (expiryDate.Length == 0)
             {
                 Error = Error + "Please Enter the expiry date of your card || ";
@@ -45,6 +41,34 @@ namespace PhotoProductClasses
 
             return Error;
         }
+
+        /* public string Valid(string nameOnCard, string cardNumber, string expiryDate, string cVV)
+         {
+             String Error = "";
+
+             if (nameOnCard.Length == 0)
+             {
+                 Error = Error + "Please Enter your Last Name || ";
+             }
+             if (cardNumber.Length != 16)
+             {
+                 Error = Error + "Please Enter correct Card Number || ";
+             }
+             if (expiryDate.Length == 0)
+             {
+                 Error = Error + "Please Enter the expiry date of your card || ";
+             }
+             if (cVV.Length == 0)
+             {
+                 Error = Error + "Please Enter your security Number || ";
+             }
+             if (cVV.Length != 3)
+             {
+                 Error = Error + "Please Enter your 3 digit security Number || ";
+             }
+
+             return Error;
+         }*/
     }
     }
   

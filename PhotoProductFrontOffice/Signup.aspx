@@ -61,7 +61,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtPassword" runat="server" Height="39px" Width="277px"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Height="39px" Width="277px" TextMode="Password"></asp:TextBox>
             <br />
             <br />
             <br />

@@ -43,7 +43,7 @@ public partial class _Default : System.Web.UI.Page
         {
             lblError.Text = Error;
 
-            // lblLabel3.Visible = false;
+            //lblLabel3.Visible = false;
         }
 
 
@@ -56,7 +56,8 @@ public partial class _Default : System.Web.UI.Page
         {
             Session["UserName"] = Username;
             Response.Redirect("PhotoPrints.aspx"); //If the user is successfully authenticated then the form will be moved to the homepage
-
+            //lblLabel3.Visible = false;
+           /// lblError.Visible = false;
         }
 
         else
@@ -64,7 +65,8 @@ public partial class _Default : System.Web.UI.Page
             lblError.Visible = true;
             lblLabel3.Text = "The Login that you have entered is incorrect"; // if the details that the user enters is not in the login table then they wull get an error.
 
-
+            
+           
         }
     }
 

@@ -41,32 +41,32 @@
             height: 188px;
         }
         .auto-style15 {
-            height: 3401px;
+            height: 3938px;
         }
         .auto-style16 {
             height: 129px;
-            width: 877px;
+            width: 1185px;
         }
         .auto-style17 {
             height: 455px;
             width: 1647px;
         }
         .auto-style20 {
-            width: 1122px;
+            width: 5309px;
         }
         .auto-style21 {
             height: 129px;
-            width: 1122px;
+            width: 5309px;
         }
         .auto-style22 {
-            width: 877px;
+            width: 1185px;
         }
         .auto-style23 {
-            width: 1290px;
+            width: 2018px;
         }
         .auto-style24 {
             height: 129px;
-            width: 1290px;
+            width: 2018px;
         }
         </style>
 </head>
@@ -167,7 +167,7 @@ Brighten up your plain wall by showcasing your favourite memory everyday by high
                         <br />
                     </td>
                     <td class="auto-style22">
-                        &nbsp;<asp:Image ID="Image8" runat="server" Height="271px" ImageUrl="~/Desk Canvas.jpg" Width="455px" />
+                        &nbsp;<asp:Image ID="Image8" runat="server" Height="271px" ImageUrl="~/Desk Canvas.jpg" Width="445px" />
                     </td>
                 </tr>
                 <tr>
@@ -205,9 +205,18 @@ Brighten up your plain wall by showcasing your favourite memory everyday by high
             <br />
             <br />
             <br />
-            <asp:Label ID="lblerrorList" runat="server"></asp:Label>
+            <asp:Label ID="lblerrorList" runat="server" Font-Size="X-Large"></asp:Label>
             <br />
             <br />
+            <br />
+            Enter a Product Name :
+            <asp:TextBox ID="txtFilter" runat="server" Height="32px" Width="200px"></asp:TextBox>
+            <br />
+            <br />
+            <br />
+            <asp:Button ID="btnApply" runat="server" OnClick="btnApply_Click" Text="Apply" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Clear" />
             <br />
             <br />
             <br />

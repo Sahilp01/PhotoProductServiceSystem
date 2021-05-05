@@ -47,6 +47,26 @@ namespace PhotoProductTesting
             Assert.AreEqual(AllProducts.ThisProduct, TestProduct);
 
         }
+        public void CountPropertyOK()
+        {
+            clsProductsCollection AllProducts = new clsProductsCollection();
+            Int32 SomeCount = 0;
+            AllProducts.Count = SomeCount;
+            Assert.AreEqual(AllProducts.Count, SomeCount);
+        }
+        public void ReportByProductNameMethodOK()
+        {
+            clsProductsCollection AllProducts = new clsProductsCollection();
+            clsProductsCollection FilteredProducts = new clsProductsCollection();
+            FilteredProducts.ReportByProductName("");
+            Assert.AreEqual(AllProducts.Count, FilteredProducts.Count);
+        }
+        public void ReportByProductNameNoneFount()
+        {
+            clsProductsCollection FilteredProducts = new clsProductsCollection();
+            FilteredProducts.ReportByProductName("xxx xxx");
+            Assert.AreEqual(0, FilteredProducts.Count);
+        }
 
     }
 }

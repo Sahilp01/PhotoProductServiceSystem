@@ -41,14 +41,13 @@ public partial class ResetPassword : System.Web.UI.Page
 
 
 
-        SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Prisha16;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+        SqlConnection con = new SqlConnection(@"Server=tcp:photoproductserver.database.windows.net,1433;Initial Catalog=AddressBook;Persist Security Info=False;User ID=photoproduct;Password=Fyproject123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
         SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tblLogin WHERE Username = '" + txtUsername1.Text + "'", con); // selects the username from the login table 
         DataTable dt = new DataTable(); //this is creating a virtual table  
         sda.Fill(dt);
         if (dt.Rows[0][0].ToString() == "1")
         {
-            
-
+ 
             if (txtNewPassword.Text == txtNewPassword1.Text)
             {
                 con.Open();
@@ -63,7 +62,7 @@ public partial class ResetPassword : System.Web.UI.Page
 
             else 
             {
-                lblErrorPass.Text = "The username that you have entered is incorrect"; 
+                lblErrorPass.Text = "The Password that you have entered doesn't match"; 
 
             }
 

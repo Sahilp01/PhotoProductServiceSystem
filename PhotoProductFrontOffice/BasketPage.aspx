@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 1579px;
+            height: 2191px;
         }
         .auto-style2 {
             margin-top: 0px;
@@ -62,6 +62,19 @@
             <br />
             <br />
             <asp:Button ID="btnCheckout" runat="server" BackColor="#CCFFFF" Font-Size="X-Large" Height="69px" Text="Checkout" Width="338px" OnClick="btnCheckout_Click" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:ListBox ID="lstDelete" runat="server" Height="288px" Width="331px" Font-Size="X-Large"></asp:ListBox>
+            <br />
+            <br />
+            <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" BackColor="#CCFFFF" Font-Size="X-Large" />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="lblDelete" runat="server" Font-Size="X-Large"></asp:Label>
         </div>
     </form>
 </body>

@@ -16,7 +16,7 @@ public partial class Checkout : System.Web.UI.Page
     {
        
     }
-  
+
 
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -25,28 +25,28 @@ public partial class Checkout : System.Web.UI.Page
         string CardNumber = txtCardNumber.Text;
         string ExpiryDate = txtExpiryDate.Text;
         string CVV = txtCVV.Text;
-    
+
         string Error = "";
         Error = AnCheckout.Valid(NameOnCard, CardNumber, ExpiryDate, CVV);
+
         if (Error == "")
         {
             AnCheckout.NameOnCard = NameOnCard;
             AnCheckout.CardNumber = Convert.ToInt64(CardNumber);
             AnCheckout.ExpiryDate = DateTime.Parse(ExpiryDate);
             AnCheckout.CVV = int.Parse(CVV);
-           
+
 
             clsCheckoutCollection CheckoutList = new clsCheckoutCollection();
             CheckoutList.ThisCheckout = AnCheckout;
             CheckoutList.Add();
             Response.Redirect("OrderConfirmed.aspx");
-
-
         }
         else
         {
             lblCheckoutError.Text = Error;
         }
+        
     }
 
   /*  protected void txtCustomerID1_TextChanged(object sender, EventArgs e)
